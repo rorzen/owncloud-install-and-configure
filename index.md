@@ -143,7 +143,7 @@ owncloud-complete-yyyymmdd.archive_type
  
 Download the archive of the latest ownCloud version:
 
-1.	Go to the ownCloud Download Page and select the required package. You can download either the ```.tar.bz2``` or ```.zip``` archive. Based on the example below, copy the link of the selected file and run the following command to download it:
+1.	Go to the [ownCloud Download Page](https://owncloud.com/download-server/) and select the required package. You can download either the ```.tar.bz2``` or ```.zip``` archive. Based on the example below, copy the link of the selected file and run the following command to download it:
 ```
 wget https://download.owncloud.org/community/owncloud-complete-yyyymmdd.tar.bz2
 ```
@@ -296,7 +296,7 @@ Follow these steps to configure ownCloud:
 
 ![image](/git-image/login-page.png)
  
-You can use a desktop or mobile client to sync your data to your ownCloud. Download OwnCloud client from here.
+You can use a desktop or mobile client to sync your data to your ownCloud. Download OwnCloud client from [here](https://owncloud.com/download-server/#install-clients).
  
 ## Adding user accounts to ownCloud server
 
@@ -351,7 +351,7 @@ To summarize, the steps involved in creating or adding a new user are entering a
  
 ## Connecting to ownCloud server using desktop client
 
-The ownCloud Desktop Synchronization Client is used for synchronizing files with the desktop computer. You can download the latest version of the ownCloud Desktop Synchronization Client from the ownCloud download page, and can run on various platforms. ownCloud Desktop Synchronization Client enables the user to:
+The ownCloud Desktop Synchronization Client is used for synchronizing files with the desktop computer. You can download the latest version of the ownCloud Desktop Synchronization Client from the [ownCloud download page](https://owncloud.com/download-server/), and can run on various platforms. ownCloud Desktop Synchronization Client enables the user to:
 
 *	Create folders in the home directory and keep the contents of those folders synced with the ownCloud server
 *	Synchronize all the latest files irrespective of their location.
