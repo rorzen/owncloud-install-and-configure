@@ -1,3 +1,5 @@
+# Quickstart for installing and using ownCloud
+
 ## Introduction
 ownCloud is an open-source file-sharing server and collaboration platform that can store your content in a centralized location. It allows you to take control of your content and security by not relying on third-party content hosting services.
 
