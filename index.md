@@ -5,14 +5,16 @@ ownCloud is an open-source file-sharing server and collaboration platform that c
 
 This document covers the information about the following topics:
 
-*	[How to download and install ownCloud](#installing-owncloud)
-*	How to configure ownCloud
-*	How to add a user account to the ownCloud server
-*	How to connect to the Owncloud server using a desktop or mobile client
+*	[How to download and install ownCloud](#owncloud-installation)
+*	[How to configure ownCloud](#configuring-owncloud)
+*	[How to add a user account to the ownCloud server](#adding-user-accounts-to-owncloud-server)
+*	[How to connect to the ownCloud server using a desktop client](#connecting-to-owncloud-server-using-desktop-client)
+*	[How to connect to the ownCloud server using a mobile client](#connecting-to-owncloud-server-using-mobile-client)
+*	[How to change your ownCloud URL and port configuration](#changing-your-owncloud-url-and-port-configuration)
 
 The following descriptions focus on the Ubuntu 18.04 server and are intended for use by professional administrator only.
 
-## Installing ownCloud
+## ownCloud installation
 
 Before setting up ownCloud, you must install Apache, PHP, and MySQL to install and configure an ownCloud server.
 
