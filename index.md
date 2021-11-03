@@ -34,7 +34,7 @@ If you are using sudo for the first time, then provide your regular user’s pas
 ```
 $ sudo apt install apache2
 ```
-+
+
 `apt` provides the information about the packages that plans to install and extra disk space to consume. 
 
 3. Press `Y` and press ENTER to confirm.
@@ -57,7 +57,7 @@ Available applications:
   Apache Full
   Apache Secure
   OpenSSH
- ```
+```
  
 2.	If you see the Apache Full profile details, you’ll see that it enables traffic to ports 80 and 443:
 ```
@@ -91,7 +91,9 @@ After successful installation and accessible through your firewall, you can see 
 ### Installing MySQL
 
 MySQL is a database management system. It organizes and provides access to databases where your site can store information.
+
 To install MySQL, follow these steps:
+
 1.	Use apt to acquire and install this software:
  
 This command shows you a list of the packages that gets installed, along with the required disk space. Enter Y to continue.
