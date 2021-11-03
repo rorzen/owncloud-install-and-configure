@@ -320,7 +320,7 @@ User accounts have the following properties:
 | FIELD | DESCRIPTION | 
 | --------------- | --------------- | 
 | Login Name (Username) |The unique ID of an ownCloud user, and it cannot be changed. | 
-| Full Name | The user’s display name that appears on file shares, the ownCloud Web interface, and emails. Admins and users can change the *Full Name* anytime, if it is not set as default login name. | 
+| Full Name | The user’s display name that appears on file shares, the ownCloud web interface, and emails. Admins and users can change the *Full Name* anytime, if it is not set as default login name. | 
 | Password | The admin sets the new user’s first password. Both the user and the admin can change the user’s password at anytime.  | 
 | Groups | 	You can create groups, and assign group memberships to users. By default, the new users are not assigned to any groups. | 
 | Group Admin | 	Group admins are granted administrative privileges on specific groups, and can add and remove users from their groups. | 
