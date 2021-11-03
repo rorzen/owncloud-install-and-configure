@@ -223,61 +223,30 @@ sudo systemctl restart apache2
 ```
 sudo vim /etc/apache2/sites-available/fosslinuxowncloud.com.conf
 ```
-6. Add the following lines to file. Replace ServerName with fosslinuxowncloud with anything you want.
-```
-<VirtualHost *:80>
-    ServerName fosslinuxowncloud.com
-    ServerAlias www.fosslinuxowncloud.com
-    ServerAdmin webmaster@fosslinuxowncloud.com
-    DocumentRoot /var/www/owncloud
-<Directory /var/www/owncloud>
-        Options -Indexes +FollowSymLinks
-        AllowOverride All
-    </Directory>
-    ErrorLog ${APACHE_LOG_DIR}/fosslinuxowncloud.com-error.log
-    CustomLog ${APACHE_LOG_DIR}/fosslinuxowncloud.com-access.log combined
-</VirtualHost>
-<VirtualHost *:443>
-    ServerName fosslinuxowncloud.com
-    ServerAlias www.fosslinuxowncloud.com
-    ServerAdmin webmaster@fosslinuxowncloud.com
-    DocumentRoot /var/www/owncloud
-<Directory /var/www/owncloud>
-        Options -Indexes +FollowSymLinks
-        AllowOverride All
-    </Directory>
-    ErrorLog ${APACHE_LOG_DIR}/fosslinuxowncloud.com-ssl-error.log
-    CustomLog ${APACHE_LOG_DIR}/fosslinuxowncloud.com-ssl-access.log combined
-SSLEngine on
-SSLCertificateFile /etc/apache2/ssl/fosslinuxowncloud.cer
-SSLCertificateKeyFile /etc/apache2/ssl/fosslinuxowncloud.key
-SSLCertificateChainFile /etc/apache2/ssl/fosslinuxowncloud.ca
-</VirtualHost>
-```
  
-7.	You can give any name to your SSL certificate files.
+6.	You can give any name to your SSL certificate files.
 ```
 SSLCertificateFile /etc/apache2/ssl/certificatefile-name.cer
 SSLCertificateKeyFile /etc/apache2/ssl/certificate-key-name.key
 SSLCertificateChainFile /etc/apache2/ssl/chain-certificate-name.ca
 ```
 
-8.	Check the syntax of the configuration file.
+7.	Check the syntax of the configuration file.
 ```
 sudo apachectl -t
 ```
  
-9.	If you get a Syntax OK message, use this command line to disable the default, virtual host.
+8.	If you get a Syntax OK message, use this command line to disable the default, virtual host.
 ```
 sudo a2dissite 000-default.conf
 ```
  
-10.	The following commands should enable new virtual hosts.
+9.	The following commands should enable new virtual hosts.
 ```
 sudo a2ensite fosslinuxowncloud.com.conf
 ```
  
-11.	Restart Apache to activate changes.
+10.	Restart Apache to activate changes.
 ```
 sudo systemctl restart apache2
 ```
