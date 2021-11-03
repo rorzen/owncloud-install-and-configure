@@ -4,12 +4,12 @@
 ownCloud is an open-source file-sharing server and collaboration platform that can store your content in a centralized location. It allows you to take control of your content and security by not relying on third-party content hosting services.
 
 This document covers the information about the following topics:
-*	Prerequisites for installing ownCloud
-*	How to download and install ownCloud
+
+*	[How to download and install ownCloud](https://github.com/rorzen/owncloud-install-and-configure/blob/gh-pages/install%20and%20configure%20an%20Owncloud%20server)
 *	How to configure ownCloud
 *	How to add a user accounts to the ownCloud server
 *	How to connect to the Owncloud server using a desktop or mobile client
-*	
+
 The following descriptions focus on the Ubuntu 18.04 server and are intended for use by professional administrator only.
 
 
