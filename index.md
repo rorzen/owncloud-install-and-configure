@@ -251,7 +251,7 @@ sudo a2ensite fosslinuxowncloud.com.conf
 sudo systemctl restart apache2
 ```
  
-### Configuring the MySQL Database for ownCloud hello
+### Configuring the MySQL Database for ownCloud
 
 This section covers the information about Configuring the MySQL Database for ownCloud.
 
@@ -336,19 +336,17 @@ To summarize, the steps involved in creating or adding a new user are entering a
 
 The ownCloud Desktop Synchronization Client is used for synchronizing files with the desktop computer. You can download the latest version of the ownCloud Desktop Synchronization Client from the ownCloud download page, and can run on various platforms. ownCloud Desktop Synchronization Client enables the user to:
 
-•	Create folders in the home directory and keep the contents of those folders synced with the ownCloud server
-•	Synchronize all the latest files irrespective of their location.
+*	Create folders in the home directory and keep the contents of those folders synced with the ownCloud server
+*	Synchronize all the latest files irrespective of their location.
 
 When you have installed the ownCloud Desktop Synchronization Client on your operating system, follow these steps to connect with your ownCloud server:
 
 1.	Run the following commands to add the repository:
  ```
  wget -nv https://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_18.04/Release.key -O Release.key
- ```
- 
- ```
  apt-key add - < Release.key
 ```
+
 2.	Run the following commands to update the repository:
  ```
  apt-get update
@@ -470,14 +468,10 @@ When config.php file is configured by the ownCloud server, you can customize the
  
 10.	Defines the host server name, for example localhost, hostname, hostname.example.com, or the
 IP address. To specify a port use hostname:##
-
 For example,
 ```
 'dbhost' => 'x.x.x.x:8080',
 where x.x.x.x is server’s IP address
-```
-
-```
 'dbname' => 'owncloud',
 ```
  
