@@ -34,7 +34,6 @@ If you are using sudo for the first time, then provide your regular user’s pas
 ```
 $ sudo apt install apache2
 ```
-`apt` provides the information about the packages that plans to install and extra disk space to consume. 
 
 3. Press `Y` and press ENTER to confirm.
 
@@ -55,7 +54,7 @@ Available applications:
   OpenSSH
 ```
 
-2.	If you see the Apache Full profile details, you’ll see that it enables traffic to ports 80 and 443:
+2.	If you see the Apache full profile details, you will see that it enables traffic to ports 80 and 443:
 ```
 $ sudo ufw app info "Apache Full"
 Output
@@ -86,7 +85,7 @@ MySQL is a database management system to organize and provide access to database
 
 To install MySQL, follow these steps:
 
-1.	Use apt to acquire and install this software:
+1.	Use ```apt``` to acquire and install this software:
 ```
 sudo apt install mysql-server
 ```
@@ -137,7 +136,7 @@ Before downloading ownCloud, change to a directory to save the file temporarily,
  
 Download the latest ownCloud archive version:
 
-1.	Go to the [ownCloud Download Page](https://owncloud.com/download-server/) and select the required package. You can download either the ```.tar.bz2``` or ```.zip``` archive. Based on the example below, copy the link of the selected file and run the following command to download it:
+1.	Go to the [ownCloud Download Page](https://owncloud.com/download-server/) and select the required package. You can download either the ```.tar.bz2``` or ```.zip``` archive. Based on the following example, copy the link of the selected file and run the following command to download it:
 ```
 wget https://download.owncloud.org/community/owncloud-complete-yyyymmdd.tar.bz2
 ```
@@ -220,7 +219,7 @@ sudo systemctl restart apache2
 sudo vim /etc/apache2/sites-available/fosslinuxowncloud.com.conf
 ```
  
-6.	You can give any name to your SSL certificate files.
+6.	Provide a name to your SSL certificate files.
 ```
 SSLCertificateFile /etc/apache2/ssl/certificatefile-name.cer
 SSLCertificateKeyFile /etc/apache2/ssl/certificate-key-name.key
@@ -232,7 +231,7 @@ SSLCertificateChainFile /etc/apache2/ssl/chain-certificate-name.ca
 sudo apachectl -t
 ```
  
-8.	If you get a ```Syntax OK``` message, use this command line to disable the default, virtual host.
+8.	If you get a ```Syntax OK``` message, use this command line to disable the default virtual host.
 ```
 sudo a2dissite 000-default.conf
 ```
@@ -249,7 +248,7 @@ sudo systemctl restart apache2
  
 ### Configuring the MySQL database for ownCloud
 
-This section covers the information about Configuring the MySQL Database for ownCloud.
+This section covers the information about configuring the MySQL Database for ownCloud.
 
 Follow these steps to configure MySQL Database:
 
@@ -262,7 +261,7 @@ sudo mysql -u root -p
 ```
 create database fosslinuxowncloud;
 ```
-3.	Create a database user and grant privileges.
+3.	Create a user and grant privileges.
 ```
 create user 'ownclouduser'@'localhost' identified BY 'QB35JaFV6A9=BJRiT90'; grant all privileges on fosslinuxowncloud.* to ownclouduser@localhost;
 ```
