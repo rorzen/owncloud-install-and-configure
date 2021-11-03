@@ -292,12 +292,11 @@ Follow these steps to configure MySQL Database:
 ```
 sudo mysql -u root -p
 ```
- 
+
 2.	Create a database, and name it.
 ```
 create database fosslinuxowncloud;
 ```
- 
 3.	Create a DB user and grant privileges.
 ```
 create user 'ownclouduser'@'localhost' identified BY 'QB35JaFV6A9=BJRiT90'; grant all privileges on fosslinuxowncloud.* to ownclouduser@localhost;
@@ -312,12 +311,14 @@ https://Domain-Name or IP
 Owncloud Web Interface
  
 Follow these steps to configure ownCloud:
+
 1.	Create an admin account by choosing a username and a password.
 2.	Fill out the details of the database name, database username, and database password. Here we installed the database in the same server, so we leave the database host as “localhost”.
 Configurations
  
 3.	Click Finish setup to configure.
-4.	Now it redirects to login page, where you can provide username and password to access the dashboard. Login Page
+4.	Now it redirects to login page, where you can provide username and password to access the dashboard. 
+Login Page
  
 You can use a desktop or mobile client to sync your data to your ownCloud. Download OwnCloud client from here.
  
