@@ -75,6 +75,8 @@ http://your_server_ip
 ```
  
 After successful installation and accessible through your firewall, you can see the default Ubuntu 18.04 Apache web page as follows:
+
+![image](/git-image/apache-default.png)
  
 ### Installing MySQL
 
