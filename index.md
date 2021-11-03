@@ -16,7 +16,7 @@ The following descriptions focus on the Ubuntu 18.04 server and are intended for
 
 Before setting up ownCloud, you must install Apache, PHP, and MySQL to install and configure an ownCloud server.
 
-### Installing Apache HTTP Server
+### Installing Apache HTTP server
 
 The Apache web server is a popular open source web server that can be used along with PHP to host dynamic websites.
 
@@ -253,7 +253,7 @@ sudo a2ensite fosslinuxowncloud.com.conf
 sudo systemctl restart apache2
 ```
  
-### Configuring the MySQL Database for ownCloud
+### Configuring the MySQL database for ownCloud
 
 This section covers the information about Configuring the MySQL Database for ownCloud.
 
@@ -321,7 +321,7 @@ To add groups, go to the **Groups field**. Hover over the **+ add group** field,
  
 Now you can start adding users and adding them to specific groups as per defined access controls.
 
-### Adding or Creating New User Accounts
+### Adding or creating new user account
 
 User accounts have the following properties:
 
@@ -435,7 +435,7 @@ After successful connection, you can view your files in your mobile client.
 
 ownCloud server is accessible under the route ```/owncloud``` (which is the default, for example, https://example.com/owncloud). However, you can change this in your web server configuration, by changing the URL from https://example.com/owncloud to https://example.com/.
 
-### Config.php Parameters
+### Config.php parameters
 
 To control server operations, ownCloud uses the ```config/config.php``` file. ```config/config.sample.php``` lists all the configurable parameters within ownCloud, along with example or default values.
 To do the changes on Debian/Ubuntu Linux operating systems, you need to edit these files:
@@ -443,7 +443,7 @@ To do the changes on Debian/Ubuntu Linux operating systems, you need to edit the
 *	```/etc/apache2/sites-enabled/owncloud.conf```
 *	```/var/www/owncloud/config/config.php```
 
-### Default Parameters
+### Default parameters
 
 When ```config.php``` file is configured by the ownCloud server, you can customize the default values of the given parameters.
 
@@ -556,7 +556,7 @@ $CONFIG = array (
  
 When the changes are made and all the files have been saved, restart the Apache server. You can now access ownCloud from either, https://example.com/ or https://localhost/.
 
-### Proxy Configurations
+### Proxy configurations
 
 1.	The automatic hostname, protocol or webroot detection of ownCloud can fail in certain reverse proxy situations. This configuration allows the automatic detection to be manually overridden. You can find the detailed explanation in the Overwrite Parameters section.
  ```
