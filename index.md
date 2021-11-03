@@ -29,11 +29,9 @@ $ sudo apt update
 If you are using sudo for the first time, then provide your regular user’s password to validate your permissions.
 
 2. Install Apache using the following command:
-
 ```
 $ sudo apt install apache2
 ```
-
 `apt` provides the information about the packages that plans to install and extra disk space to consume. 
 
 3. Press `Y` and press ENTER to confirm.
