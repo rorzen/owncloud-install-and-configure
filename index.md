@@ -114,6 +114,7 @@ $ sudo mysql
 ```
  
 6.	It connects to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. You must see the output as:
+ 
  ```
  Output
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -130,7 +131,9 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 mysql>
 ```
+
 7.	To exit the MySQL console, run the following command:
+
 ```
 mysql> exit
 ```
@@ -140,6 +143,7 @@ mysql> exit
 PHP is the component of your setup that processes code to display dynamic content. It can run scripts, connect to your MySQL databases to get information, and provide the processed content over to your web server so that it can display the results to your visitors.
 
 In addition to the php package, you need libapache2-mod-php to integrate PHP into Apache, and the php-mysql package to allow PHP to connect to MySQL databases. Run the following command to install all three packages and their dependencies:
+
 ```
 $sudo apt install php libapache2-mod-php php-mysql
 ```
