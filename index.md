@@ -385,17 +385,25 @@ apt-get install owncloud-client
  
 6.	After successful installation, launch the ownCloud Desktop Client.
 7.	In the ownCloud Connection Wizard dialog box, enter the URL of your ownCloud server. Click **Next** to proceed.
+![image](/git-image/owncloud1.png)
+
  
 8.	Enter your ownCloud login credential on the next screen. Click **Next** to proceed.
+![image](/git-image/owncloud2.png)
+
  
 9.	Select the local folder and configure sync settings.
+![image](/git-image/owncloud3.png)
+
  
 10.	Click **Connect** to allow the ownCloud Desktop Synchronization Client to connect to your ownCloud server. After successful connection, you will see the following options:
 
 * Open ownCloud in Browser
 * Open Local Folder
 
-Choose the option where you want to synchronize your files. click Finish.
+Choose the option where you want to synchronize your files. click **Finish**.
+![image](/git-image/owncloud4.png)
+
  
  
 ## Connecting to ownCloud server using mobile client
@@ -412,8 +420,12 @@ Accessing your files on your ownCloud server via the Web interface is easy and c
 You can also download the ownCloud server from App Store and follow these steps to connect to the server:
 
 1.	Enter your cloud URL and user credential which was provided during the registration process.
+![image](/git-image/owncloud5.png)
+
  
 2.	Tap **Connect**.
+![image](/git-image/owncloud6.png)
+
  
 After successful connection, you can view your files in your mobile client.
  
