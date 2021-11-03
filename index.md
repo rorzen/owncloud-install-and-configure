@@ -545,8 +545,7 @@ When the changes are made and all the files have been saved, restart the Apache 
  'overwritecondaddr' => '',
 ```
 
-5.	This option allows you to define a manual override condition as a regular expression for the remote IP address. For example, defining a range of IP addresses starting with 10.0.0. and ending with 1 to 3:
-```^10.0.0.[1-3]$```
+5.	This option allows you to define a manual override condition as a regular expression for the remote IP address. For example, defining a range of IP addresses starting with 10.0.0. and ending with 1 to 3: ```^10.0.0.[1-3]$```
  ```
  'overwrite.cli.url' => '',
 ```
