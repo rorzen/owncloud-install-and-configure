@@ -36,7 +36,7 @@ $ sudo apt install apache2
 
 3. Press `Y` and press ENTER to confirm.
 
-#### Adjusting the firewall to allow web traffic  hello hello
+#### Adjusting the firewall to allow web traffic 
 
 Assuming that you have followed the initial server setup instructions and enabled the UFW firewall, make sure that your firewall allows HTTP and HTTPS traffic.
 
@@ -45,7 +45,6 @@ To adjust the firewall, follow these steps:
 1.	Check that UFW has an application profile for Apache using the following command:
 ```
 $ sudo ufw app list
-
 Output
 Available applications:
   Apache
@@ -57,9 +56,6 @@ Available applications:
 2.	If you see the Apache Full profile details, you’ll see that it enables traffic to ports 80 and 443:
 ```
 $ sudo ufw app info "Apache Full"
-```
-
-```
 Output
 Profile: Apache Full
 Title: Web Server (HTTP,HTTPS)
@@ -69,7 +65,6 @@ server.
 Ports:
   80,443/tcp
 ```
-
 To allow incoming HTTP and HTTPS traffic for this server, run the following command:
 ```
 sudo ufw allow "Apache Full"
