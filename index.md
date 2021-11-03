@@ -424,6 +424,8 @@ You can also download the ownCloud server from App Store and follow these steps 
 
  
 2.	Tap **Connect**.
+
+
 ![image](/git-image/owncloud6.png)
 
  
