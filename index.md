@@ -298,7 +298,6 @@ To access ownCloud service, the user must have user account created and managed 
 **Before you begin**
 
 1.	Sign in to the ownCloud server using an administrator account.
-
 The user administration page is displayed.
 2.	Click on the admin username to get the users menu link. A drop-down menu appears with options to enter the following sections: **Personal**, **Users**, **Apps**, **Admin**, **Help**, and **Log out**.
 ![image](/git-image/drop-down.png)
