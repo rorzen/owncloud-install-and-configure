@@ -96,17 +96,44 @@ MySQL is a database management system. It organizes and provides access to datab
 To install MySQL, follow these steps:
 
 1.	Use apt to acquire and install this software:
+```
+sudo apt install mysql-server
+```
  
 This command shows you a list of the packages that gets installed, along with the required disk space. Enter Y to continue.
 2.	When the installation is complete, run a security script that comes pre-installed with MySQL, which removes some dangerous defaults and lock down access to your database system. Start the interactive script by running:
+```
+$ sudo mysql_secure_installation
+```
  
 3.	Answer Y for yes if you want to configure the VALIDATE PASSWORD PLUGIN, or anything else to continue without enabling.
 4.	Enter Y to continue for a series of questions asked.
 5.	Verify if you are able to log in to the MySQL console by running the following command:
+```
+$ sudo mysql
+```
  
 6.	It connects to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. You must see the output as:
- 
+ ```
+ Output
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5
+Server version: 5.7.34-0ubuntu0.18.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+```
 7.	To exit the MySQL console, run the following command:
+```
+mysql> exit
+```
  
 Installing PHP
 PHP is the component of your setup that processes code to display dynamic content. It can run scripts, connect to your MySQL databases to get information, and provide the processed content over to your web server so that it can display the results to your visitors.
