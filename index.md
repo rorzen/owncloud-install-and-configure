@@ -5,7 +5,7 @@ ownCloud is an open-source file-sharing server and collaboration platform that c
 
 This document covers the information about the following topics:
 
-*	[How to download and install ownCloud](https://github.com/rorzen/owncloud-install-and-configure/blob/gh-pages/index.md#installing-owncloud-installing-owncloud)
+*	[How to download and install ownCloud](#installing-owncloud)
 *	How to configure ownCloud
 *	How to add a user accounts to the ownCloud server
 *	How to connect to the Owncloud server using a desktop or mobile client
