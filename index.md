@@ -311,7 +311,7 @@ To add groups, go to the **Groups field**. Hover over the **+ add group** field,
 ![image](/git-image/add-group.png)
 
  
-Now you can start adding users to specific groups as per defined access controls.
+Now, you can start adding users to specific groups as per defined access controls.
 
 ### Adding or creating new user account
 
@@ -334,12 +334,9 @@ To create a user account:
 
 ![image](/git-image/add-account.png)
 
- 
-After creating the user, you may fill in their **Full Name** if it is different from the login name or you can leave it for the user to complete.
-![image](/git-image/full-name.png)
 
  
-Now, the new user can now log in to the ownCloud server and start collaborating with other users.
+Now, the new user can log in to the ownCloud server and start collaborating with other users.
  
 ## Connecting to ownCloud server using desktop client
 
