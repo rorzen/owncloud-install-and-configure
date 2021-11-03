@@ -122,7 +122,7 @@ mysql> exit
 
 PHP is the component of your setup that processes code to display dynamic content. It can run scripts, connect to your MySQL databases to get information, and provide the processed content over to your web server so that it can display the results to your visitors.
 
-In addition to the php package, you need libapache2-mod-php to integrate PHP into Apache, and the php-mysql package to allow PHP to connect to MySQL databases. Run the following command to install all three packages and their dependencies:
+In addition to the php package, you need ```libapache2-mod-php``` to integrate PHP into Apache, and the ```php-mysql``` package to allow PHP to connect to MySQL databases. Run the following command to install all three packages and their dependencies:
 ```
 $sudo apt install php libapache2-mod-php php-mysql
 ```
@@ -134,7 +134,7 @@ To install ownCloud binaries, you have to download the required package. After d
 
 #### Downloading ownCloud
 
-Before downloading ownCloud, change to a directory where you want to save the file temporarily. This can be, for example, /tmp. In further examples, tar archives or the complete ownCloud bundle is used. The name for the complete archive looks like this:
+Before downloading ownCloud, change to a directory where you want to save the file temporarily. This can be, for example, ```/tmp```. In further examples, tar archives or the complete ownCloud bundle is used. The name for the complete archive looks like this:
 ```
 owncloud-complete-yyyymmdd.archive_type
 ```
@@ -218,7 +218,7 @@ sudo a2enmod ssl
 ```
 sudo systemctl restart apache2
 ```
-4.	Copy your SSL certificates to /etc/apache2/ssl/ folder.	
+4.	Copy your SSL certificates to ```/etc/apache2/ssl/``` folder.	
 5.	Create a virtual host file.
 ```
 sudo vim /etc/apache2/sites-available/fosslinuxowncloud.com.conf
@@ -236,7 +236,7 @@ SSLCertificateChainFile /etc/apache2/ssl/chain-certificate-name.ca
 sudo apachectl -t
 ```
  
-8.	If you get a Syntax OK message, use this command line to disable the default, virtual host.
+8.	If you get a ```Syntax OK``` message, use this command line to disable the default, virtual host.
 ```
 sudo a2dissite 000-default.conf
 ```
@@ -401,11 +401,11 @@ After successful connection, you can view your files in your mobile client.
  
 ## Changing your ownCloud URL and port configuration
 
-ownCloud server is accessible under the route /owncloud (which is the default, for example, https://example.com/owncloud). However, you can change this in your web server configuration, by changing the URL from https://example.com/owncloud to https://example.com/.
+ownCloud server is accessible under the route ```/owncloud``` (which is the default, for example, https://example.com/owncloud). However, you can change this in your web server configuration, by changing the URL from https://example.com/owncloud to https://example.com/.
 
 ### Config.php Parameters
 
-To control server operations, ownCloud uses the config/config.php file. config/config.sample.php lists all the configurable parameters within ownCloud, along with example or default values.
+To control server operations, ownCloud uses the ```config/config.php``` file. ```config/config.sample.php``` lists all the configurable parameters within ownCloud, along with example or default values.
 To do the changes on Debian/Ubuntu Linux operating systems, you need to edit these files:
 
 *	```/etc/apache2/sites-enabled/owncloud.conf```
@@ -413,7 +413,7 @@ To do the changes on Debian/Ubuntu Linux operating systems, you need to edit the
 
 ### Default Parameters
 
-When config.php file is configured by the ownCloud server, you can customize the default values of the given parameters.
+When ```config.php``` file is configured by the ownCloud server, you can customize the default values of the given parameters.
 
 1.	Following parameters are configured by the ownCloud installer, and are required for your ownCloud server to operate.
 ```
@@ -465,7 +465,7 @@ When config.php file is configured by the ownCloud server, you can customize the
 'dbhost' => '',
 ```
  
-10.	Defines the host server name, for example localhost, hostname, hostname.example.com, or the
+10.	Defines the host server name, for example ```localhost```, ```hostname```, ```hostname.example.com```, or the
 IP address. To specify a port use hostname:##
 For example,
 ```
@@ -498,7 +498,7 @@ where x.x.x.x is server’s IP address
 
 ### Default config.php example
 
-The following displays the config.php after installing ownCloud using MySQL database.
+The following displays the ```config.php``` after installing ownCloud using MySQL database.
 ```
 <?php
 $CONFIG = array (
@@ -534,12 +534,12 @@ When the changes are made and all the files have been saved, restart the Apache 
  ```
  'overwriteprotocol' => '',
 ```
-3.	When generating URLs, ownCloud attempts to detect whether the server is accessed via https or http. However, if ownCloud is behind a proxy and the proxy handles the https calls, ownCloud would not know that ssl is in use, which would result in incorrect URLs being generated.
+3.	When generating URLs, ownCloud attempts to detect whether the server is accessed via ```https``` or ```http```. However, if ownCloud is behind a proxy and the proxy handles the https calls, ownCloud would not know that ```ssl``` is in use, which would result in incorrect URLs being generated.
  ```
  'overwritewebroot' => '',
 ```
 
-4.	ownCloud attempts to detect the webroot for generating URLs automatically. For example, if www.example.com/owncloud is the URL pointing to the ownCloud instance, the webroot is /owncloud. When proxies are in use, it may be difficult for ownCloud to detect this parameter, resulting in invalid URLs.
+4.	ownCloud attempts to detect the webroot for generating URLs automatically. For example, if ```www.example.com/owncloud``` is the URL pointing to the ownCloud instance, the webroot is ```/owncloud```. When proxies are in use, it may be difficult for ownCloud to detect this parameter, resulting in invalid URLs.
  ```
  'overwritecondaddr' => '',
 ```
