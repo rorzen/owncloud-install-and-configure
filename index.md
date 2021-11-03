@@ -12,7 +12,7 @@ This document covers the information about the following topics:
 
 The following descriptions focus on the Ubuntu 18.04 server and are intended for use by professional administrator only.
 
-== Installing ownCloud (#installing-owncloud)
+# Installing ownCloud (#installing-owncloud)
 
 Before setting up ownCloud, you must install Apache, PHP, and MySQL to install and configure an ownCloud server.
 
