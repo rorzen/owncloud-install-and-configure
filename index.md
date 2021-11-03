@@ -36,7 +36,7 @@ $ sudo apt install apache2
 
 3. Press `Y` and press ENTER to confirm.
 
-#### Adjusting the firewall to allow web traffic
+#### Adjusting the firewall to allow web traffic  Hello
 
 Assuming that you have followed the initial server setup instructions and enabled the UFW firewall, make sure that your firewall allows HTTP and HTTPS traffic.
 
