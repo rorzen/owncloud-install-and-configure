@@ -55,7 +55,7 @@ Available applications:
   Apache Secure
   OpenSSH
 ```
- 
+
 2.	If you see the Apache Full profile details, you’ll see that it enables traffic to ports 80 and 443:
 ```
 $ sudo ufw app info "Apache Full"
@@ -71,13 +71,12 @@ server.
 Ports:
   80,443/tcp
 ```
- 
-To allow incoming HTTP and HTTPS traffic for this server, run the following command:
 
+To allow incoming HTTP and HTTPS traffic for this server, run the following command:
 ```
 sudo ufw allow "Apache Full"
 ```
- 
+
 3.	Visit your server’s public IP address in your web browser to verify by running the following command:
 ```
 http://your_server_ip
@@ -95,13 +94,12 @@ To install MySQL, follow these steps:
 ```
 sudo apt install mysql-server
 ```
- 
 This command shows you a list of the packages that gets installed, along with the required disk space. Enter Y to continue.
+
 2.	When the installation is complete, run a security script that comes pre-installed with MySQL, which removes some dangerous defaults and lock down access to your database system. Start the interactive script by running:
 ```
 $ sudo mysql_secure_installation
-```
- 
+``` 
 3.	Answer Y for yes if you want to configure the VALIDATE PASSWORD PLUGIN, or anything else to continue without enabling.
 4.	Enter Y to continue for a series of questions asked.
 5.	Verify if you are able to log in to the MySQL console by running the following command:
@@ -110,8 +108,7 @@ $ sudo mysql
 ```
  
 6.	It connects to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. You must see the output as:
- 
- ```
+```
  Output
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 5
@@ -129,7 +126,6 @@ mysql>
 ```
 
 7.	To exit the MySQL console, run the following command:
-
 ```
 mysql> exit
 ```
@@ -188,27 +184,28 @@ gpg --verify owncloud-complete-yyyymmdd.tar.bz2.asc owncloud-complete-yyyymmdd.t
 #### Installing ownCloud
 
 The ownCloud server package does not exist within the default repositories for Ubuntu. However, ownCloud maintains a dedicated repository for the distribution that you can add to your server.
+
 1.	Download their release key and import it with the apt-key utility with the following command:
 ```
 sudo wget -nv https://download.owncloud.org/download/repositories/production/Ubuntu_18.04/Release.key -O Release.key
 sudo apt-key add - < Release.key
 ```
- 
+
 2.	Run the following shell commands to add the repository:
 ```
 sudo echo 'deb http://download.owncloud.org/download/repositories/production/Ubuntu_18.04/ /' |  sudo tee /etc/apt/sources.list.d/owncloud.list
 ```
- 
+
 3.	Update repositories using the following command:
 ```
 sudo apt-get update
 ```
- 
+
 4.	Install additional PHP packages using the following command:
 ```
 sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-xml php-zip
 ```
- 
+
 5.	Install ownCloud package using the following command:
 ```
 sudo apt-get install owncloud-files
@@ -219,29 +216,29 @@ Install Owncloud Package
 ### Configuring Apache with SSL
 
 This section covers the information about creating a virtual host for ownCloud.
+
 Follow these steps to configure Apache with SSL:
+
 1.	Create a folder for SSL certificates.
 ```
 sudo mkdir /etc/apache2/ssl
 ```
- 
+
 2.	Enable SSL module.
 ```
 sudo a2enmod ssl
 ```
- 
+
 3.	Restart Apache.
 ```
 sudo systemctl restart apache2
 ```
- 
-4.	Copy your SSL certificates to /etc/apache2/ssl/ folder
+4.	Copy your SSL certificates to /etc/apache2/ssl/ folder.	
 5.	Create a virtual host file.
 ```
 sudo vim /etc/apache2/sites-available/fosslinuxowncloud.com.conf
 ```
- 
-6.	Add the following lines to file. Replace ServerName with fosslinuxowncloud with anything you want.
+6. Add the following lines to file. Replace ServerName with fosslinuxowncloud with anything you want.
 ```
 <VirtualHost *:80>
     ServerName fosslinuxowncloud.com
