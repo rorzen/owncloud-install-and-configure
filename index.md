@@ -105,15 +105,11 @@ $ sudo mysql
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 5
 Server version: 5.7.34-0ubuntu0.18.04.1 (Ubuntu)
-
 Copyright (c) 2000, 2021, Oracle and/or its affiliates.
-
 Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
 owners.
-
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
 mysql>
 ```
 
@@ -127,7 +123,6 @@ mysql> exit
 PHP is the component of your setup that processes code to display dynamic content. It can run scripts, connect to your MySQL databases to get information, and provide the processed content over to your web server so that it can display the results to your visitors.
 
 In addition to the php package, you need libapache2-mod-php to integrate PHP into Apache, and the php-mysql package to allow PHP to connect to MySQL databases. Run the following command to install all three packages and their dependencies:
-
 ```
 $sudo apt install php libapache2-mod-php php-mysql
 ```
@@ -140,7 +135,6 @@ To install ownCloud binaries, you have to download the required package. After d
 #### Downloading ownCloud
 
 Before downloading ownCloud, change to a directory where you want to save the file temporarily. This can be, for example, /tmp. In further examples, tar archives or the complete ownCloud bundle is used. The name for the complete archive looks like this:
-
 ```
 owncloud-complete-yyyymmdd.archive_type
 ```
@@ -169,7 +163,6 @@ sudo sha256sum -c owncloud-complete-yyyymmdd.tar.bz2.sha256 < owncloud-complete-
 4.	You can also verify the PGP signature:
 ```
 wget https://download.owncloud.org/community/owncloud-complete-yyyymmdd.tar.bz2.asc
-
 gpg --verify owncloud-complete-yyyymmdd.tar.bz2.asc owncloud-complete-yyyymmdd.tar.bz2
 ```
  
