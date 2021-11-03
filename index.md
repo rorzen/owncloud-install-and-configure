@@ -312,15 +312,14 @@ Now you can start adding users and adding them to specific groups as per defined
 
 User accounts have the following properties:
 
-For Specific Apps
-FIELD	DESCRIPTION
-Login Name (Username)	The unique ID of an ownCloud user, and it cannot be changed.
-Full Name	The user’s display name that appears on file shares, the ownCloud
-Web interface, and emails. Admins and users may change the Full Name anytime. If the Full Name is not set it defaults to the login name.
-Password	The admin sets the new user’s first password. Both the user and the admin can change the user’s password at anytime.
-Groups	You may create groups, and assign group memberships to users. By default new users are not assigned to any groups.
-Group Admin	Group admins are granted administrative privileges on specific groups, and can add and remove users from their groups.
-Quota	The maximum disk space assigned to each user. Any user that exceeds the quota cannot upload or sync data. You have the option to include external storage in user quotas.
+| FIELD | DESCRIPTION | 
+| --------------- | --------------- | 
+| Login Name (Username) |The unique ID of an ownCloud user, and it cannot be changed. | 
+| Full Name | The user’s display name that appears on file shares, the ownCloud Web interface, and emails. Admins and users may change the Full Name anytime. If the Full Name is not set it defaults to the login name. | 
+| Password | The admin sets the new user’s first password. Both the user and the admin can change the user’s password at anytime.  | 
+| Groups | 	You may create groups, and assign group memberships to users. By default new users are not assigned to any groups. | 
+| Group Admin | 	Group admins are granted administrative privileges on specific groups, and can add and remove users from their groups. | 
+| Quota | 	The maximum disk space assigned to each user. Any user that exceeds the quota cannot upload or sync data. You have the option to include external storage in user quotas.| 
 
 To create a user account:
 
