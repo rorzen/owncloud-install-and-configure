@@ -135,18 +135,31 @@ mysql>
 mysql> exit
 ```
  
-Installing PHP
+### Installing PHP
+
 PHP is the component of your setup that processes code to display dynamic content. It can run scripts, connect to your MySQL databases to get information, and provide the processed content over to your web server so that it can display the results to your visitors.
+
 In addition to the php package, you need libapache2-mod-php to integrate PHP into Apache, and the php-mysql package to allow PHP to connect to MySQL databases. Run the following command to install all three packages and their dependencies:
+```
+$sudo apt install php libapache2-mod-php php-mysql
+```
  
  
-Installing ownCloud
+### Installing ownCloud
+
 To install ownCloud binaries, you have to download the required package. After doing so, you can perform the following steps manually or use the provided scripts. These scripts are convenient since they can also be used for upgrading, which eases the process a lot.
-Downloading ownCloud
+
+#### Downloading ownCloud
+
 Before downloading ownCloud, change to a directory where you want to save the file temporarily. This can be, for example, /tmp. In further examples, tar archives or the complete ownCloud bundle is used. The name for the complete archive looks like this:
+
+```
+owncloud-complete-yyyymmdd.archive_type
+```
  
 Download the archive of the latest ownCloud version:
-1.	Go to the ownCloud Download Page and select the required package. You can download either the `.tar.bz2 or .zip archive. Based on the example below, copy the link of the selected file and run the following command to download it:
+
+1.	Go to the ownCloud Download Page and select the required package. You can download either the ```.tar.bz2``` or ```.zip``` archive. Based on the example below, copy the link of the selected file and run the following command to download it:
  
 2.	Download the corresponding checksum file:
  
