@@ -23,11 +23,9 @@ The Apache web server is a popular open source web server that can be used along
 Perform the following steps to install Apache:
 
 1. Make sure your `apt` cache is updated with:
-
 ```
 $ sudo apt update
 ```  
-
 If you are using sudo for the first time, then provide your regular user’s password to validate your permissions.
 
 2. Install Apache using the following command:
