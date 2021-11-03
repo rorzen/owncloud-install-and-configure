@@ -40,7 +40,7 @@ $ sudo apt install apache2
 
 #### Adjusting the firewall to allow web traffic 
 
-Assuming that you have followed the initial server setup instructions and enabled the UFW firewall, make sure that your firewall allows HTTP and HTTPS traffic.
+Assuming that you have followed the initial server setup instructions and enabled the UFW firewall, make sure your firewall allows HTTP and HTTPS traffic.
 
 To adjust the firewall, follow these steps:
 
@@ -82,7 +82,7 @@ After successful installation and accessible through your firewall, you can see 
  
 ### Installing MySQL
 
-MySQL is a database management system. It organizes and provides access to databases where your site can store information.
+MySQL is a database management system to organize and provide access to databases where your site can store information.
 
 To install MySQL, follow these steps:
 
