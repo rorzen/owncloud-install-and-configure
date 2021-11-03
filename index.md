@@ -230,7 +230,6 @@ sudo vim /etc/apache2/sites-available/fosslinuxowncloud.com.conf
     ServerAlias www.fosslinuxowncloud.com
     ServerAdmin webmaster@fosslinuxowncloud.com
     DocumentRoot /var/www/owncloud
-
 <Directory /var/www/owncloud>
         Options -Indexes +FollowSymLinks
         AllowOverride All
@@ -238,28 +237,21 @@ sudo vim /etc/apache2/sites-available/fosslinuxowncloud.com.conf
     ErrorLog ${APACHE_LOG_DIR}/fosslinuxowncloud.com-error.log
     CustomLog ${APACHE_LOG_DIR}/fosslinuxowncloud.com-access.log combined
 </VirtualHost>
-
 <VirtualHost *:443>
     ServerName fosslinuxowncloud.com
     ServerAlias www.fosslinuxowncloud.com
     ServerAdmin webmaster@fosslinuxowncloud.com
     DocumentRoot /var/www/owncloud
-
 <Directory /var/www/owncloud>
         Options -Indexes +FollowSymLinks
         AllowOverride All
     </Directory>
     ErrorLog ${APACHE_LOG_DIR}/fosslinuxowncloud.com-ssl-error.log
     CustomLog ${APACHE_LOG_DIR}/fosslinuxowncloud.com-ssl-access.log combined
-
-
 SSLEngine on
-
 SSLCertificateFile /etc/apache2/ssl/fosslinuxowncloud.cer
 SSLCertificateKeyFile /etc/apache2/ssl/fosslinuxowncloud.key
 SSLCertificateChainFile /etc/apache2/ssl/fosslinuxowncloud.ca
-
-
 </VirtualHost>
 ```
  
@@ -269,6 +261,7 @@ SSLCertificateFile /etc/apache2/ssl/certificatefile-name.cer
 SSLCertificateKeyFile /etc/apache2/ssl/certificate-key-name.key
 SSLCertificateChainFile /etc/apache2/ssl/chain-certificate-name.ca
 ```
+
 8.	Check the syntax of the configuration file.
 ```
 sudo apachectl -t
