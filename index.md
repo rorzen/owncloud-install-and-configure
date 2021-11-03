@@ -403,7 +403,7 @@ apt-get install owncloud-client
 * Open ownCloud in Browser
 * Open Local Folder
 
-Choose the option where you want to synchronize your files. click **Finish**.
+Choose the option where you want to synchronize your files. Click **Finish**.
 ![image](/git-image/owncloud4.png)
 
  
