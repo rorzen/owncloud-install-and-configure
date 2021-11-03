@@ -61,7 +61,6 @@ Profile: Apache Full
 Title: Web Server (HTTP,HTTPS)
 Description: Apache v2 is the next generation of the omnipresent Apache web
 server.
-
 Ports:
   80,443/tcp
 ```
