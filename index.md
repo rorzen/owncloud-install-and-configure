@@ -197,8 +197,8 @@ sudo apt install php-bz2 php-curl php-gd php-imagick php-intl php-mbstring php-x
 ```
 sudo apt-get install owncloud-files
 ```
- 
-Install Owncloud Package
+
+![image](/git-image/install-owncloud-package.png)
  
 ### Configuring Apache with SSL
 
@@ -272,6 +272,8 @@ create database fosslinuxowncloud;
 ```
 create user 'ownclouduser'@'localhost' identified BY 'QB35JaFV6A9=BJRiT90'; grant all privileges on fosslinuxowncloud.* to ownclouduser@localhost;
 ```
+
+
  
 ## Configuring ownCloud
 Open a web browser and navigate to the following address to access the ownCloud web interface:
@@ -279,17 +281,20 @@ Open a web browser and navigate to the following address to access the ownCloud 
 https://Domain-Name or IP
 ```
  
-Owncloud Web Interface
+![image](/git-image/owncloud-page.png)
  
 Follow these steps to configure ownCloud:
 
 1.	Create an admin account by choosing a username and a password.
 2.	Fill out the details of the database name, database username, and database password. Here we installed the database in the same server, so we leave the database host as “localhost”.
-Configurations
+![image](/git-image/configurations.png)
+
+
  
 3.	Click **Finish setup** to configure.
 4.	Now it redirects to login page, where you can provide username and password to access the dashboard. 
-Login Page
+
+![image](/git-image/login-page.png)
  
 You can use a desktop or mobile client to sync your data to your ownCloud. Download OwnCloud client from here.
  
@@ -302,11 +307,17 @@ To access ownCloud service, the user needs to have their user account which is c
 1.	Sign in to the ownCloud server using an administrator account.
 The user administration page is displayed.
 2.	Click on the admin username to get the users menu link. A drop-down menu appears with options to enter the following sections: **Personal**, **Users**, **Apps**, **Admin**, **Help**, and **Log out**.
+![image](/git-image/drop-down.png)
  
 3.	Click on the **Users** item from the drop-down menu to view the information about your users, whose accounts have already been created.
+![image](/git-image/default.png)
+
  
 4.	Create groups based on user’s access limitations.
+
 To add groups, go to the **Groups field**. Hover over the **+ add group** field, enter a name for the group.
+![image](/git-image/add-group.png)
+
  
 Now you can start adding users and adding them to specific groups as per defined access controls.
 
@@ -328,8 +339,13 @@ To create a user account:
 1.	Enter the new user’s **Login Name** and the initial **Password**.
 2.	Optionally, assign **Groups** memberships.
 3.	Click **Create**.
+
+![image](/git-image/add-account.png)
+
  
 After creating the user, you may fill in their **Full Name** if it is different from the login name or you can leave it for the user to complete.
+![image](/git-image/full-name.png)
+
  
 To summarize, the steps involved in creating or adding a new user are entering a name and password and delegating the user to a group. The new user can now log in to the ownCloud server and start collaborating with other users.
  
