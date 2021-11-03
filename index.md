@@ -285,7 +285,7 @@ Follow these steps to configure ownCloud:
 2.	Fill out the details of the database name, database username, and database password. Here we installed the database in the same server, so we leave the database host as “localhost”.
 Configurations
  
-3.	Click Finish setup to configure.
+3.	Click **Finish setup** to configure.
 4.	Now it redirects to login page, where you can provide username and password to access the dashboard. 
 Login Page
  
@@ -299,12 +299,12 @@ To access ownCloud service, the user needs to have their user account which is c
 
 1.	Sign in to the ownCloud server using an administrator account.
 The user administration page is displayed.
-2.	Click on the admin username to get the users menu link. A drop-down menu appears with options to enter the following sections: Personal, Users, Apps, Admin, Help, and Log out.
+2.	Click on the admin username to get the users menu link. A drop-down menu appears with options to enter the following sections: **Personal**, **Users**, **Apps**, **Admin**, **Help**, and **Log out**.
  
-3.	Click on the Users item from the drop-down menu to view the information about your users, whose accounts have already been created.
+3.	Click on the **Users** item from the drop-down menu to view the information about your users, whose accounts have already been created.
  
 4.	Create groups based on user’s access limitations.
-To add groups, go to the Groups field. Hover over the + add group field, enter a name for the group.
+To add groups, go to the **Groups field**. Hover over the **+ add group** field, enter a name for the group.
  
 Now you can start adding users and adding them to specific groups as per defined access controls.
 
@@ -323,11 +323,11 @@ User accounts have the following properties:
 
 To create a user account:
 
-1.	Enter the new user’s Login Name and the initial Password.
-2.	Optionally, assign Groups memberships.
-3.	Click Create.
+1.	Enter the new user’s **Login Name** and the initial **Password**.
+2.	Optionally, assign **Groups** memberships.
+3.	Click **Create**.
  
-After creating the user, you may fill in their Full Name if it is different from the login name or you can leave it for the user to complete.
+After creating the user, you may fill in their **Full Name** if it is different from the login name or you can leave it for the user to complete.
  
 To summarize, the steps involved in creating or adding a new user are entering a name and password and delegating the user to a group. The new user can now log in to the ownCloud server and start collaborating with other users.
  
@@ -366,13 +366,13 @@ apt-get install owncloud-client
 ```
  
 6.	After successful installation, launch the ownCloud Desktop Client.
-7.	In the ownCloud Connection Wizard dialog box, enter the URL of your ownCloud server. Click Next to proceed.
+7.	In the ownCloud Connection Wizard dialog box, enter the URL of your ownCloud server. Click **Next** to proceed.
  
-8.	Enter your ownCloud login credential on the next screen. Click Next to proceed.
+8.	Enter your ownCloud login credential on the next screen. Click **Next** to proceed.
  
 9.	Select the local folder and configure sync settings.
  
-10.	Click Connect to allow the ownCloud Desktop Synchronization Client to connect to your ownCloud server. After successful connection, you will see the following options:
+10.	Click **Connect** to allow the ownCloud Desktop Synchronization Client to connect to your ownCloud server. After successful connection, you will see the following options:
 
 * Open ownCloud in Browser
 * Open Local Folder
@@ -395,7 +395,7 @@ You can also download the ownCloud server from App Store and follow these steps 
 
 1.	Enter your cloud URL and user credential which was provided during the registration process.
  
-2.	Tap Connect.
+2.	Tap **Connect**.
  
 After successful connection, you can view your files in your mobile client.
  
