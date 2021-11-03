@@ -90,20 +90,19 @@ To install MySQL, follow these steps:
 ```
 sudo apt install mysql-server
 ```
-This command shows you a list of the packages that gets installed, along with the required disk space. Enter Y to continue.
+This command provides a list of the packages that gets installed, along with the required disk space. Enter Y to continue.
 
-2.	When the installation is complete, run a security script that comes pre-installed with MySQL, which removes some dangerous defaults and lock down access to your database system. Start the interactive script by running:
+2.	When the installation is complete, run a security script that comes pre-installed with MySQL to remove some defaults and lock-down access to your database system. Start the interactive script by running:
 ```
 $ sudo mysql_secure_installation
 ``` 
-3.	Answer Y for yes if you want to configure the VALIDATE PASSWORD PLUGIN, or anything else to continue without enabling.
-4.	Enter Y to continue for a series of questions asked.
-5.	Verify if you are able to log in to the MySQL console by running the following command:
+3.	Answer Y for yes if you want to configure the ```VALIDATE PASSWORD PLUGIN```.
+4.	Verify if you can log in to the MySQL console by running the following command:
 ```
 $ sudo mysql
 ```
  
-6.	It connects to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. You must see the output as:
+5.	You must see the output as:
 ```
  Output
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -117,33 +116,26 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql>
 ```
 
-7.	To exit the MySQL console, run the following command:
+6.	To exit the MySQL console, run the following command:
 ```
 mysql> exit
 ```
  
 ### Installing PHP
 
-PHP is the component of your setup that processes code to display dynamic content. It can run scripts, connect to your MySQL databases to get information, and provide the processed content over to your web server so that it can display the results to your visitors.
+PHP is the setup component that processes code to display dynamic content. It can run scripts, connect to your MySQL databases to get information, and provide the processed content to your web server to display the results to your visitors.
 
 In addition to the php package, you need ```libapache2-mod-php``` to integrate PHP into Apache, and the ```php-mysql``` package to allow PHP to connect to MySQL databases. Run the following command to install all three packages and their dependencies:
 ```
 $sudo apt install php libapache2-mod-php php-mysql
 ```
  
+
+### Downloading ownCloud
+
+Before downloading ownCloud, change to a directory to save the file temporarily, for example, ```/tmp```. 
  
-### Downloading and installing ownCloud
-
-To install ownCloud binaries, you have to download the required package. After doing so, you can perform the following steps manually or use the provided scripts. These scripts are convenient since they can also be used for upgrading, which eases the process a lot.
-
-#### Downloading ownCloud
-
-Before downloading ownCloud, change to a directory where you want to save the file temporarily. This can be, for example, ```/tmp```. In further examples, tar archives or the complete ownCloud bundle is used. The name for the complete archive looks like this:
-```
-owncloud-complete-yyyymmdd.archive_type
-```
- 
-Download the archive of the latest ownCloud version:
+Download the latest ownCloud archive version:
 
 1.	Go to the [ownCloud Download Page](https://owncloud.com/download-server/) and select the required package. You can download either the ```.tar.bz2``` or ```.zip``` archive. Based on the example below, copy the link of the selected file and run the following command to download it:
 ```
@@ -170,17 +162,17 @@ wget https://download.owncloud.org/community/owncloud-complete-yyyymmdd.tar.bz2.
 gpg --verify owncloud-complete-yyyymmdd.tar.bz2.asc owncloud-complete-yyyymmdd.tar.bz2
 ```
  
-#### Installing ownCloud
+### Installing ownCloud
 
 The ownCloud server package does not exist within the default repositories for Ubuntu. However, ownCloud maintains a dedicated repository for the distribution that you can add to your server.
 
-1.	Download their release key and import it with the apt-key utility with the following command:
+1.	Download the ownCloud release key and import it with the apt-key utility with the following command:
 ```
 sudo wget -nv https://download.owncloud.org/download/repositories/production/Ubuntu_18.04/Release.key -O Release.key
 sudo apt-key add - < Release.key
 ```
 
-2.	Run the following shell commands to add the repository:
+2.	Run the following command to add the repository:
 ```
 sudo echo 'deb http://download.owncloud.org/download/repositories/production/Ubuntu_18.04/ /' |  sudo tee /etc/apt/sources.list.d/owncloud.list
 ```
@@ -245,7 +237,7 @@ sudo apachectl -t
 sudo a2dissite 000-default.conf
 ```
  
-9.	The following commands should enable new virtual hosts.
+9.	The following command should enable new virtual hosts.
 ```
 sudo a2ensite fosslinuxowncloud.com.conf
 ```
@@ -266,11 +258,11 @@ Follow these steps to configure MySQL Database:
 sudo mysql -u root -p
 ```
 
-2.	Create a database, and name it.
+2.	Create a database.
 ```
 create database fosslinuxowncloud;
 ```
-3.	Create a DB user and grant privileges.
+3.	Create a database user and grant privileges.
 ```
 create user 'ownclouduser'@'localhost' identified BY 'QB35JaFV6A9=BJRiT90'; grant all privileges on fosslinuxowncloud.* to ownclouduser@localhost;
 ```
@@ -288,13 +280,13 @@ https://Domain-Name or IP
 Follow these steps to configure ownCloud:
 
 1.	Create an admin account by choosing a username and a password.
-2.	Fill out the details of the database name, database username, and database password. Here we installed the database in the same server, so we leave the database host as “localhost”.
+2.	Fill out the details of the database name, username, and password.
 ![image](/git-image/configurations.png)
 
 
  
 3.	Click **Finish setup** to configure.
-4.	Now it redirects to login page, where you can provide username and password to access the dashboard. 
+4.	It redirects you to login page, where you can provide username and password to access the dashboard. 
 
 ![image](/git-image/login-page.png)
  
@@ -302,7 +294,7 @@ You can use a desktop or mobile client to sync your data to your ownCloud. Downl
  
 ## Adding user accounts to ownCloud server
 
-To access ownCloud service, the user needs to have their user account which is created and managed by the admin group.
+To access ownCloud service, the user must have user account created and managed by the admin group.
 
 **Before you begin**
 
@@ -311,7 +303,7 @@ The user administration page is displayed.
 2.	Click on the admin username to get the users menu link. A drop-down menu appears with options to enter the following sections: **Personal**, **Users**, **Apps**, **Admin**, **Help**, and **Log out**.
 ![image](/git-image/drop-down.png)
  
-3.	Click on the **Users** item from the drop-down menu to view the information about your users, whose accounts have already been created.
+3.	Click **Users** from the drop-down menu to view the information about users.
 ![image](/git-image/default.png)
 
  
@@ -321,7 +313,7 @@ To add groups, go to the **Groups field**. Hover over the **+ add group** field,
 ![image](/git-image/add-group.png)
 
  
-Now you can start adding users and adding them to specific groups as per defined access controls.
+Now you can start adding users to specific groups as per defined access controls.
 
 ### Adding or creating new user account
 
@@ -330,16 +322,16 @@ User accounts have the following properties:
 | FIELD | DESCRIPTION | 
 | --------------- | --------------- | 
 | Login Name (Username) |The unique ID of an ownCloud user, and it cannot be changed. | 
-| Full Name | The user’s display name that appears on file shares, the ownCloud Web interface, and emails. Admins and users may change the Full Name anytime. If the Full Name is not set it defaults to the login name. | 
+| Full Name | The user’s display name that appears on file shares, the ownCloud Web interface, and emails. Admins and users can change the *Full Name* anytime, if it is not set as default login name. | 
 | Password | The admin sets the new user’s first password. Both the user and the admin can change the user’s password at anytime.  | 
-| Groups | 	You may create groups, and assign group memberships to users. By default new users are not assigned to any groups. | 
+| Groups | 	You can create groups, and assign group memberships to users. By default, the new users are not assigned to any groups. | 
 | Group Admin | 	Group admins are granted administrative privileges on specific groups, and can add and remove users from their groups. | 
 | Quota | 	The maximum disk space assigned to each user. Any user that exceeds the quota cannot upload or sync data. You have the option to include external storage in user quotas.| 
 
 To create a user account:
 
 1.	Enter the new user’s **Login Name** and the initial **Password**.
-2.	Optionally, assign **Groups** memberships.
+2.	Optionally, assign **Groups** membership.
 3.	Click **Create**.
 
 ![image](/git-image/add-account.png)
@@ -349,38 +341,38 @@ After creating the user, you may fill in their **Full Name** if it is different 
 ![image](/git-image/full-name.png)
 
  
-To summarize, the steps involved in creating or adding a new user are entering a name and password and delegating the user to a group. The new user can now log in to the ownCloud server and start collaborating with other users.
+Now, the new user can now log in to the ownCloud server and start collaborating with other users.
  
 ## Connecting to ownCloud server using desktop client
 
-The ownCloud Desktop Synchronization Client is used for synchronizing files with the desktop computer. You can download the latest version of the ownCloud Desktop Synchronization Client from the [ownCloud download page](https://owncloud.com/download-server/), and can run on various platforms. ownCloud Desktop Synchronization Client enables the user to:
+The ownCloud Desktop Synchronization Client is used for synchronizing files with the desktop computer. You can download the latest version of the ownCloud Desktop Synchronization Client from the [ownCloud download page](https://owncloud.com/download-server/), and run on various platforms. ownCloud Desktop Synchronization Client enables the user to:
 
-*	Create folders in the home directory and keep the contents of those folders synced with the ownCloud server
+*	Create folders in the home directory and keep the contents of those folders synced with the ownCloud server.
 *	Synchronize all the latest files irrespective of their location.
 
 When you have installed the ownCloud Desktop Synchronization Client on your operating system, follow these steps to connect with your ownCloud server:
 
-1.	Run the following commands to add the repository:
+1.	Run the following command to add the repository:
  ```
  wget -nv https://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_18.04/Release.key -O Release.key
  apt-key add - < Release.key
 ```
 
-2.	Run the following commands to update the repository:
+2.	Run the following command to update the repository:
  ```
  apt-get update
 ```
-3.	Run the following commands to add the repository:
+3.	Run the following command to add the repository:
  ```
 sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_18.04/ /' > /etc/apt/sources.list.d/isv:ownCloud:desktop.list"
  ```
  
-4.	Run the following to command to update the repository:
+4.	Run the following command to update the repository:
 ```
 apt-get update
 ```
 
-5.	Run the following to command to install client.
+5.	Run the following command to install client.
 ```
 apt-get install owncloud-client
 ```
@@ -414,14 +406,14 @@ Accessing your files on your ownCloud server via the Web interface is easy and c
 
 *	A simplified interface that fits nicely on a tablet or smartphone
 *	Automatic synchronization of your files
-*	Share files with other ownCloud users and groups, and create multiple public share links
-*	Upload of photos and videos recorded on your Android device
-*	Easily add files from your device to ownCloud
+*	Share files with other ownCloud users, groups, and create multiple public share links
+*	Upload photos and videos recorded on your Android device
+*	Add files easily from your device to ownCloud
 *	Two-factor authentication
 
 You can also download the ownCloud server from App Store and follow these steps to connect to the server:
 
-1.	Enter your cloud URL and user credential which was provided during the registration process.
+1.	Enter the cloud URL and user credential that was provided during the registration process.
 ![image](/git-image/owncloud5.png)
 
  
@@ -435,26 +427,25 @@ After successful connection, you can view your files in your mobile client.
  
 ## Changing your ownCloud URL and port configuration
 
-ownCloud server is accessible under the route ```/owncloud``` (which is the default, for example, https://example.com/owncloud). However, you can change this in your web server configuration, by changing the URL from https://example.com/owncloud to https://example.com/.
+ownCloud server is accessible under the route ```/owncloud```, for example, https://example.com/owncloud. However, you can change this in your web server configuration, by changing the URL from https://example.com/owncloud to https://example.com/.
 
 ### Config.php parameters
 
-To control server operations, ownCloud uses the ```config/config.php``` file. ```config/config.sample.php``` lists all the configurable parameters within ownCloud, along with example or default values.
-To do the changes on Debian/Ubuntu Linux operating systems, you need to edit these files:
+To change the Debian/Ubuntu Linux operating systems, you must edit these files:
 
 *	```/etc/apache2/sites-enabled/owncloud.conf```
 *	```/var/www/owncloud/config/config.php```
 
 ### Default parameters
 
-When ```config.php``` file is configured by the ownCloud server, you can customize the default values of the given parameters.
+When ```config.php``` file is configured by the ownCloud server, you can customize the default values of the provided parameters.
 
 1.	Following parameters are configured by the ownCloud installer, and are required for your ownCloud server to operate.
 ```
 'instanceid' => '',
 ```
  
-2.	A valid instanceid is auto-generated by the ownCloud installer when you install ownCloud.
+2.	A valid ```instanceid``` is auto-generated by the ownCloud installer when you install ownCloud.
 ```
 'passwordsalt' => '',
 ```
@@ -475,31 +466,26 @@ When ```config.php``` file is configured by the ownCloud server, you can customi
 ],
 ```
  
-5.	All users can use tools running CORS requests from the listed domains.
-```
-'datadirectory' => '/var/www/owncloud/data',
-```
- 
-6.	The following defines the location of the user files data/ in the ownCloud directory.
+5.	The following defines the location of the user files data/ in the ownCloud directory.
 ```
 'version' => '',
 ```
  
-7.	Identifies the current version number of your ownCloud installation. This is set up and updated during installation, and so it does not require any changes.
+6.	Identifies the current version number of your ownCloud installation. This is set up and updated during installation, and so it does not require any changes.
 ```
 'version.hide' => false,
 ```
 
-8.	Optionally, show the hostname of the server in status.php.
+7.	Optionally, show the hostname of the server in status.php.
  ```
  'dbtype' => 'mysql',
 ```
-9.	Identifies the database used with this installation.
+8.	Identifies the database used with this installation.
 ```
 'dbhost' => '',
 ```
  
-10.	Defines the host server name, for example ```localhost```, ```hostname```, ```hostname.example.com```, or the
+9.	Defines the host server name, for example ```localhost```, ```hostname```, ```hostname.example.com```, or the
 IP address. To specify a port use hostname:##
 For example,
 ```
@@ -508,27 +494,27 @@ where x.x.x.x is server’s IP address
 'dbname' => 'owncloud',
 ```
  
-11.	Defines the name of the ownCloud database, which is set during installation.
+10.	Defines the ownCloud database name, which is set during installation.
 ```
 'dbuser' => '',
 ```
  
-12.	Defines the user that ownCloud uses to write to the database. This must be unique across ownCloud instances using the same SQL database.
+11.	Defines the user that ownCloud uses to write to the database. This must be unique across ownCloud instances using the same SQL database.
 ```
 'dbpassword' => '',
 ```
 
-13.	Defines the password for the database user, which is set up during installation.
+12.	Defines the password for the database user, which is set up during installation.
 ```
 'dbtableprefix' => '',
 ```
  
-14.	Prefix for the ownCloud tables in the database.
+13.	Prefix for the ownCloud tables in the database.
 ```
 'installed' => false,
 ```
  
-15.	Indicates whether the ownCloud instance was installed successfully; true indicates a successful installation, and false indicates an unsuccessful installation.
+14.	Indicates whether the ownCloud instance was installed successfully; true indicates a successful installation, and false indicates an unsuccessful installation.
 
 ### Default config.php example
 
@@ -568,7 +554,7 @@ When the changes are made and all the files have been saved, restart the Apache 
  ```
  'overwriteprotocol' => '',
 ```
-3.	When generating URLs, ownCloud attempts to detect whether the server is accessed via ```https``` or ```http```. However, if ownCloud is behind a proxy and the proxy handles the https calls, ownCloud would not know that ```ssl``` is in use, which would result in incorrect URLs being generated.
+3.	When you generate URLs, ownCloud attempts to detect whether the server is accessed via ```https``` or ```http```. However, if ownCloud is behind a proxy and the proxy handles the https calls, ownCloud would not know that ```ssl``` is in use, which would result in incorrect URLs being generated.
  ```
  'overwritewebroot' => '',
 ```
@@ -583,7 +569,7 @@ When the changes are made and all the files have been saved, restart the Apache 
  'overwrite.cli.url' => '',
 ```
 
-Use these configuration parameter to specify the base URL for any URLs which are generated within ownCloud using any kind of command line tools (cron or occ). The value should contain the full base URL:
+Use these configuration parameters to specify the base URL for any URLs which are generated within ownCloud using any kind of command line tools (cron or occ). The value should contain the full base URL:
 https://www.example.com/owncloud
 
 
