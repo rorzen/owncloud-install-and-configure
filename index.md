@@ -299,7 +299,7 @@ To access ownCloud service, the user must have user account created and managed 
 
 1.	Sign in to the ownCloud server using an administrator account.
 The user administration page is displayed.
-2.	Click on the admin username to get the users menu link. A drop-down menu appears with options to enter the following sections: **Personal**, **Users**, **Apps**, **Admin**, **Help**, and **Log out**.
+2.	Click on the admin username to get the drop-down menu.
 ![image](/git-image/drop-down.png)
  
 3.	Click **Users** from the drop-down menu to view the information about users.
@@ -307,7 +307,6 @@ The user administration page is displayed.
 
  
 4.	Create groups based on user’s access limitations.
-
 To add groups, go to the **Groups field**. Hover over the **+ add group** field, enter a name for the group.
 ![image](/git-image/add-group.png)
 
