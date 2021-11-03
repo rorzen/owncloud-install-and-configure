@@ -397,7 +397,7 @@ Choose the option where you want to synchronize your files. Click **Finish**.
  
 ## Connecting to ownCloud server using mobile client
 
-Accessing your files on your ownCloud server via the Web interface is easy and convenient. You can use any web browser on any operating system without installing special client software. However, the ownCloud application offers several key advantages over the web interface; these include:
+Accessing your files on your ownCloud server via the Web interface is easy and convenient. You can use any web browser on any operating system without installing special client software. However, the ownCloud application offers several key advantages over the web interface, which includes:
 
 *	A simplified interface that fits nicely on a tablet or smartphone
 *	Automatic synchronization of your files
