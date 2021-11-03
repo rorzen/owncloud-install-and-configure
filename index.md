@@ -282,7 +282,7 @@ sudo a2ensite fosslinuxowncloud.com.conf
 sudo systemctl restart apache2
 ```
  
-### Configuring the MySQL Database for ownCloud
+### Configuring the MySQL Database for ownCloud hello
 
 This section covers the information about Configuring the MySQL Database for ownCloud.
 
