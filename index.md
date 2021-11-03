@@ -36,7 +36,7 @@ $ sudo apt install apache2
 
 3. Press `Y` and press ENTER to confirm.
 
-#### Adjusting the firewall to allow web traffic  Hello
+#### Adjusting the firewall to allow web traffic  hello hello
 
 Assuming that you have followed the initial server setup instructions and enabled the UFW firewall, make sure that your firewall allows HTTP and HTTPS traffic.
 
@@ -45,9 +45,7 @@ To adjust the firewall, follow these steps:
 1.	Check that UFW has an application profile for Apache using the following command:
 ```
 $ sudo ufw app list
-```
 
-```
 Output
 Available applications:
   Apache
