@@ -27,6 +27,7 @@ Perform the following steps to install Apache:
 ```
 $ sudo apt update
 ```  
+
 If you are using sudo for the first time, then provide your regular user’s password to validate your permissions.
 
 2. Install Apache using the following command:
